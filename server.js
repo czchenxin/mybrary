@@ -30,6 +30,7 @@ const mongoose=require('mongoose')
  connectDB()
 
 app.use('/',indexRouter)
+
 mongoose.connection.once('open',()=>{
     console.log("COnnected to MongoDB");
 app.listen(process.env.PORT|| 3000)
